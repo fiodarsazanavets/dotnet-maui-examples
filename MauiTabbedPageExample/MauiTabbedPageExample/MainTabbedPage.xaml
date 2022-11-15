@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:MauiTabbedPageExample"
+             x:Class="MauiTabbedPageExample.MainTabbedPage"
+            BarTextColor="Blue"
+            SelectedTabColor="Red"
+            UnselectedTabColor="Purple"
+            BarBackgroundColor="Yellow" >
+    <local:MainPage Title="Main Page" />
+    <NavigationPage Title="Transport Selector" >
+        <x:Arguments>
+            <ContentPage>
+                <StackLayout HorizontalOptions="Center" >
+                    <Label Text="Choose transport type" />
+                    <RadioButton Content="Train" />
+                    <RadioButton Content="Car" />
+                    <RadioButton Content="Motorbike" />
+                    <RadioButton Content="Bicycle"
+                 IsChecked="true" />
+                </StackLayout>
+            </ContentPage>
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>
