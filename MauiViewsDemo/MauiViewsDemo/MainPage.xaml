@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiViewsDemo.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Hello, World!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Welcome to .NET Multi-platform App UI"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+
+            <ActivityIndicator IsRunning="true" />
+
+            <CheckBox IsChecked="true"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+
+            <DatePicker MinimumDate="2022-01-01"
+                MaximumDate="2033-12-31"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+
+            <TimePicker
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+
+            <Editor
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+
+            <Entry
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+
+            <ImageButton
+                Source="dotnet_bot.png"
+                WidthRequest="100"
+                HeightRequest="50"
+                Clicked="OnImageButtonClicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+
+            <Label
+                x:Name="ImageLabel"
+                Text="Click me"
+                HorizontalOptions="Center" />
+
+            <SearchBar Placeholder="Search..."
+                VerticalOptions="Center" />
+
+            <ProgressBar Progress="0.5"
+                VerticalOptions="Center" />
+            
+            <Slider Minimum="0"
+                Maximum="100"
+                VerticalOptions="Center" />
+
+            <Stepper Maximum="100"
+                 Increment="1"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center" />
+
+            <Switch IsToggled="true"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center" />
+
+            <StackLayout
+                HorizontalOptions="Center"
+                VerticalOptions="Center" >
+                <Label Text="What's your favorite color?" />
+                <RadioButton Content="White" />
+                <RadioButton Content="Black" />
+                <RadioButton Content="Yellow" />
+                <RadioButton Content="Red" />
+                <RadioButton Content="Blue" />
+                <RadioButton Content="Purple" />
+                <RadioButton Content="Green"
+                 IsChecked="true" />
+            </StackLayout>
+
+            <Picker x:Name="picker"
+                Title="Select a car"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Merceded</x:String>
+                        <x:String>BMW</x:String>
+                        <x:String>Toyota</x:String>
+                        <x:String>Honda</x:String>
+                        <x:String>Ferrari</x:String>
+                        <x:String>Porsche</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <TableView Intent="Menu"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" >
+                <TableRoot>
+                    <TableSection Title="Animals">
+                        <TextCell Text="Mammals"
+                      Detail="Get familiar with species of mammals" />
+                        <TextCell Text="Reptiles"
+                      Detail="Learn about reptiles" />
+                        <TextCell Text="Birds"
+                      Detail="Get to know bird species" />
+                        <TextCell Text="Fishes"
+                      Detail="Learn about species of fish" />
+                        <TextCell Text="Molluscs"
+                      Detail="Learn about molluscs" />
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,0,0,40"
+                Background="White"
+                Padding="16,8"
+                HorizontalOptions="Center">
+
+                <Label Text="Border wrapped around a Label"
+                    HorizontalOptions="Center" />
+
+            </Border>
+
+            <Frame BorderColor="Black"
+                CornerRadius="10">
+                <Label Text="Frame wrapped around a Label"
+                    HorizontalOptions="Center" />
+            </Frame>
+
+            <BoxView Color="CornflowerBlue"
+                CornerRadius="5"
+                WidthRequest="80"
+                HeightRequest="80"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+
+            <Rectangle Fill="Blue"
+                WidthRequest="100"
+                HeightRequest="80"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+
+            <RoundRectangle Fill="Blue"
+                CornerRadius="10"
+                WidthRequest="100"
+                HeightRequest="80"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+
+            <Ellipse Fill="Purple"
+                WidthRequest="100"
+                HeightRequest="50"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+
+            <Path Data="M 10,100 L 100,100 100,50Z"
+                Stroke="Blue"
+                Aspect="Uniform"
+                WidthRequest="100"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+
+            <Polygon Points="40,10 70,80 10,50"
+                WidthRequest="100"
+                Fill="AliceBlue"
+                Stroke="Purple"
+                StrokeThickness="1" />
+
+            <Line X1="100"
+                  Y1="0"
+                  X2="0"
+                  Y2="40"
+                  Stroke="Red"
+                  HorizontalOptions="Center"
+                  VerticalOptions="Center" />
+
+            <Polyline Points="0,0 23,30 35,30 40,0 43,60 100,30"
+                Stroke="Green"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
