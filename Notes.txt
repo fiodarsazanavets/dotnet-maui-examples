@@ -1,0 +1,16 @@
+Mention SwipeView in gestures
+Apply RefreshView to gestures
+
+Apply CarouselView to Data binding
+Apply IndicatorView to Data binding
+Apply BindableLayout to MVVM
+
+
+Add GraphicsView to graphics section
+
+
+Web view examples
+BlazorWebViw
+WebView
+
+Add ContentView example

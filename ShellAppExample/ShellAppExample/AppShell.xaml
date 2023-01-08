@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ShellAppExample.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ShellAppExample"
+    Shell.FlyoutBehavior="Flyout">
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+
+        <ShellContent Title="Contacts"
+                      Icon="contacts.png"
+                      ContentTemplate="{DataTemplate local:Contacts}" />
+        <ShellContent Title="Reminders"
+                      Icon="reminders.png"
+                      ContentTemplate="{DataTemplate local:Reminders}" />
+    </FlyoutItem>
+
+</Shell>
