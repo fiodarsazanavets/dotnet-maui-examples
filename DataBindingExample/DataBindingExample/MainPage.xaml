@@ -4,39 +4,46 @@
              xmlns:local="clr-namespace:DataBindingExample"
              x:Class="DataBindingExample.MainPage">
 
-    <ScrollView>
-        <HorizontalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-
-            <StackLayout Margin="10">
-                <CarouselView>
-                    <CarouselView.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>Baboon</x:String>
-                            <x:String>Capuchin Monkey</x:String>
-                            <x:String>Blue Monkey</x:String>
-                            <x:String>Squirrel Monkey</x:String>
-                            <x:String>Golden Lion Tamarin</x:String>
-                            <x:String>Howler Monkey</x:String>
-                            <x:String>Japanese Macaque</x:String>
-                            <x:String>Mandrill</x:String>
-                            <x:String>Proboscis Monkey</x:String>
-                            <x:String>Red-shanked Douc</x:String>
-                            <x:String>Gray-shanked Douc</x:String>
-                            <x:String>Golden Snub-nosed Monkey</x:String>
-                            <x:String>Black Snub-nosed Monkey</x:String>
-                            <x:String>Tonkin Snub-nosed Monkey</x:String>
-                            <x:String>Thomas's Langur</x:String>
-                            <x:String>Purple-faced Langur</x:String>
-                            <x:String>Gelada</x:String>
-                        </x:Array>
-                    </CarouselView.ItemsSource>
-                </CarouselView>
-                </StackLayout>
-
-        </HorizontalStackLayout>
-    </ScrollView>
+    <StackLayout Margin="10">
+        <CarouselView ItemsSource="{x:Static local:CarsCollection.Data}"
+                              IndicatorView="indicatorView">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame HasShadow="True"
+                            BorderColor="DarkGray"
+                            CornerRadius="5"
+                            Margin="20"
+                            HeightRequest="300"
+                            WidthRequest="1000"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center">
+                            <StackLayout>
+                                <Label Text="{Binding Make}" 
+                                    FontAttributes="Bold"
+                                    FontSize="20"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center" />
+                                
+                                <Label Text="{Binding Model}"
+                                    HorizontalOptions="Center" />
+                                <Label Text="{Binding Description}"
+                                       FontAttributes="Italic"
+                                       HorizontalOptions="Center"
+                                       MaxLines="5"
+                                       LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView x:Name="indicatorView"
+            IndicatorsShape="Square"
+            IndicatorColor="LightGray"
+            SelectedIndicatorColor="DarkGray"
+            HorizontalOptions="Center"
+            Margin="0,0,0,40" />
+    </StackLayout>
 
 </ContentPage>

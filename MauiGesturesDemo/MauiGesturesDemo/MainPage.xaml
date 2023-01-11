@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiGesturesDemo.MainPage">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <StackLayout>
+                <RefreshView x:Name="refreshView" RefreshColor="Green">
+                    <Label Text="RefreshViw example"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </RefreshView>
+            </StackLayout>
+            <StackLayout Margin="20">
+                <SwipeView>
+                    <SwipeView.LeftItems>
+                        <SwipeItems>
+                            <SwipeItemView Invoked="OnIncorrectAnswerInvoked">
+                                <Grid WidthRequest="100">
+                                    <Frame BackgroundColor="DarkGray"
+                                            CornerRadius="30">
+                                        <Label Text="1"
+                                                HorizontalOptions="Center"
+                                                VerticalOptions="Center" />
+                                    </Frame>
+                                </Grid>
+                            </SwipeItemView>
+                            <SwipeItemView Invoked="OnIncorrectAnswerInvoked">
+                                <Grid WidthRequest="100">
+                                    <Frame BackgroundColor="DarkGray"
+                                            CornerRadius="30">
+                                        <Label Text="2"
+                                                HorizontalOptions="Center"
+                                                VerticalOptions="Center" />
+                                    </Frame>
+                                </Grid>
+                            </SwipeItemView>
+                            <SwipeItemView Invoked="OnIncorrectAnswerInvoked">
+                                <Grid WidthRequest="100">
+                                    <Frame BackgroundColor="DarkGray"
+                                            CornerRadius="30">
+                                        <Label Text="3"
+                                                HorizontalOptions="Center"
+                                                VerticalOptions="Center" />
+                                    </Frame>
+                                </Grid>
+                            </SwipeItemView>
+                            <SwipeItemView Invoked="OnCorrectAnswerInvoked">
+                                <Grid WidthRequest="100">
+                                    <Frame BackgroundColor="DarkGray"
+                                            CornerRadius="30">
+                                        <Label Text="4"
+                                                HorizontalOptions="Center"
+                                                VerticalOptions="Center" />
+                                    </Frame>
+                                </Grid>
+                            </SwipeItemView>
+                        </SwipeItems>
+                    </SwipeView.LeftItems>
+                    <Grid HeightRequest="70"
+                            WidthRequest="300"
+                            BackgroundColor="LightGray">
+                        <Label Text="What's 2 + 2? Swipe right to answer."
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center" />
+                    </Grid>
+                </SwipeView>
+
+            </StackLayout>
+            <BoxView Color="Black"
+                CornerRadius="10"
+                WidthRequest="160"
+                HeightRequest="160"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+                <BoxView.GestureRecognizers>
+                    <SwipeGestureRecognizer Direction="Left" Swiped="OnSwipedLeft"/>
+                </BoxView.GestureRecognizers>
+            </BoxView>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
