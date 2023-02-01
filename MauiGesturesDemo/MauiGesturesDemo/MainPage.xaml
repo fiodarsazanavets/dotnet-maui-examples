@@ -8,57 +8,29 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-            <StackLayout>
+            <StackLayout Margin="100">
                 <RefreshView x:Name="refreshView" RefreshColor="Green">
-                    <Label Text="RefreshViw example"
+                    <ScrollView>
+                        <Label Text="RefreshView example"
                            HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                           VerticalOptions="Center" />  
+                    </ScrollView>
+                    
                 </RefreshView>
             </StackLayout>
             <StackLayout Margin="20">
                 <SwipeView>
                     <SwipeView.LeftItems>
                         <SwipeItems>
-                            <SwipeItemView Invoked="OnIncorrectAnswerInvoked">
-                                <Grid WidthRequest="100">
-                                    <Frame BackgroundColor="DarkGray"
-                                            CornerRadius="30">
-                                        <Label Text="1"
-                                                HorizontalOptions="Center"
-                                                VerticalOptions="Center" />
-                                    </Frame>
-                                </Grid>
-                            </SwipeItemView>
-                            <SwipeItemView Invoked="OnIncorrectAnswerInvoked">
-                                <Grid WidthRequest="100">
-                                    <Frame BackgroundColor="DarkGray"
-                                            CornerRadius="30">
-                                        <Label Text="2"
-                                                HorizontalOptions="Center"
-                                                VerticalOptions="Center" />
-                                    </Frame>
-                                </Grid>
-                            </SwipeItemView>
-                            <SwipeItemView Invoked="OnIncorrectAnswerInvoked">
-                                <Grid WidthRequest="100">
-                                    <Frame BackgroundColor="DarkGray"
-                                            CornerRadius="30">
-                                        <Label Text="3"
-                                                HorizontalOptions="Center"
-                                                VerticalOptions="Center" />
-                                    </Frame>
-                                </Grid>
-                            </SwipeItemView>
-                            <SwipeItemView Invoked="OnCorrectAnswerInvoked">
-                                <Grid WidthRequest="100">
-                                    <Frame BackgroundColor="DarkGray"
-                                            CornerRadius="30">
-                                        <Label Text="4"
-                                                HorizontalOptions="Center"
-                                                VerticalOptions="Center" />
-                                    </Frame>
-                                </Grid>
-                            </SwipeItemView>
+                            <SwipeItem Text="1"
+                               BackgroundColor="LightGreen"
+                               Invoked="OnIncorrectAnswerInvoked" />
+                            <SwipeItem Text="2"
+                               BackgroundColor="LightPink"
+                               Invoked="OnIncorrectAnswerInvoked" />
+                            <SwipeItem Text="4"
+                               BackgroundColor="LightBlue"
+                               Invoked="OnCorrectAnswerInvoked" />
                         </SwipeItems>
                     </SwipeView.LeftItems>
                     <Grid HeightRequest="70"
