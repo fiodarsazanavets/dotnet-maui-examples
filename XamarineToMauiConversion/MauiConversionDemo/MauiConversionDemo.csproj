@@ -7,6 +7,9 @@
 	  <SingleProject>true</SingleProject>
 	  <ImplicitUsings>enable</ImplicitUsings>
 	  
+      <ApplicationId>com.companyname.mauiconversiondemo</ApplicationId>
+      <ApplicationIdGuid>73e03bf9-822d-48b5-8b3a-26b493c6de55</ApplicationIdGuid>
+	  
 	  <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">31.0</SupportedOSPlatformVersion>
   </PropertyGroup>
 

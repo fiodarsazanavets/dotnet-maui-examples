@@ -1,14 +1,1 @@
-
-Apply RefreshView to gestures
-
 Apply BindableLayout to MVVM
-
-
-Add GraphicsView to graphics section
-
-
-Web view examples
-BlazorWebViw
-WebView
-
-Add ContentView example
