@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiGraphicsDemo.MainPage">
+
+    <ContentPage.Resources>
+        <StyleSheet>
+            <![CDATA[
+            ^button {
+                text-color: lightgray;
+            }
+            ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout
+            BackgroundColor="{StaticResource PageBackgroundColor}"
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                x:Name="PageImage"
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="Change Image Scale"
+                BackgroundColor="{DynamicResource PrimaryColor}"
+                Clicked="ChangeImageScale"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="Rotate Image"
+                Clicked="RotateImage"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="Transale Image"
+                Clicked="TranslateImage"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="Fade Image"
+                Clicked="FadeImage"
+                HorizontalOptions="Center" />
+            
+            <Button
+                Text="Scale and Rotate Image"
+                Clicked="RotateAndScaleImage"
+                HorizontalOptions="Center" />
+
+            <Frame Background="LightGreen"
+                BorderColor="DarkGreen"
+                HasShadow="True"
+                CornerRadius="12"
+                HeightRequest="120"
+                WidthRequest="120"
+                HorizontalOptions="Center" />
+
+            <Frame BorderColor="DarkGreen"
+                HasShadow="True"
+                CornerRadius="12"
+                HeightRequest="120"
+                WidthRequest="120">
+                <Frame.Background>
+                    <LinearGradientBrush EndPoint="1,0">
+                        <GradientStop Color="Blue"
+                          Offset="0.1" />
+                        <GradientStop Color="Orange"
+                          Offset="1.0" />
+                    </LinearGradientBrush>
+                </Frame.Background>
+            </Frame>
+
+            <Frame BorderColor="DarkGreen"
+                HasShadow="True"
+                CornerRadius="12"
+                HeightRequest="120"
+                WidthRequest="120">
+                <Frame.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="Blue"
+                          Offset="0.1" />
+                        <GradientStop Color="Orange"
+                          Offset="1.0" />
+                    </RadialGradientBrush>
+                </Frame.Background>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
